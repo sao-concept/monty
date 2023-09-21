@@ -11,8 +11,7 @@ void _div_operation(stack_t **_stack, unsigned int _line_number)
 
 	if (*_stack == NULL || (*_stack)->next == NULL || (*_stack)->n == 0)
 	{
-		fprintf(stderr, "L%d: cannot div elements, insufficient values
-or division by zero\n", _line_number);
+		fprintf(stderr, "L%d: cannot div elements\n", _line_number);
 		exit(EXIT_FAILURE);
 	}
 

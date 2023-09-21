@@ -12,8 +12,7 @@ void _mul_operation(stack_t **_stack, unsigned int _line_number)
 
 	if (*_stack == NULL || (*_stack)->next == NULL)
 	{
-		fprintf(stderr, "L%d: cannot mul elements, insufficient values\n",
-_line_number);
+		fprintf(stderr, "L%d: cannot mul elements\n", _line_number);
 		exit(EXIT_FAILURE);
 	}
 
