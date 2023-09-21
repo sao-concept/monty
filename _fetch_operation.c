@@ -19,7 +19,11 @@ instruction_t ops[] = {
 {"sub", _sub_operation},
 {"sub", _div_operation},
 {"sub", _mul_operation},
-{"sub", _mod_operation},/* Add new functions here */
+{"sub", _mod_operation},
+{"pchar", _pchar_operation},
+{"pstr", _pstr_operation},
+{"rotl", _rotl_operation},
+{"rotr", _rotr_operation},/* Add new functions here */
 {NULL, NULL}
 };
 	int i = 0;
