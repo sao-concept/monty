@@ -8,6 +8,14 @@
 #include <string.h>
 #include <unistd.h>
 
+
+#define MONTY_ERROR_INVALID_OPCODE 0
+#define MONTY_ERROR_PUSH_MISSING_ARG 1
+#define MONTY_ERROR_PUSH_INVALID_ARG 2
+#define MONTY_ERROR_POP_EMPTY 3
+#define MONTY_ERROR_PINT_EMPTY 5
+
+
 extern char *_operand;
 
 /**
@@ -53,6 +61,26 @@ typedef struct line_s
 	int number;
 } line_t;
 
+
+/**
+ * struct MontyError - struct for monty error
+ * @error_code: code error
+ * @_line_number: line number
+ * @token: token
+ *
+ * Description: stores errors of the monty source code
+ */
+typedef struct MontyError
+{
+int error_code;
+int _line_number;
+const char *token;
+} MontyError;
+
+void print_error(const char *_message, int _line);
+void monty_error(const MontyError *error);
+
+
 int _execute_monty(const char *_filename);
 line_t *_text_file_reader(const char *_filename);
 char **_line_spliter(char *_line);
@@ -72,5 +100,8 @@ int _atoi(char *s, int *n);
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 char *strdup(const char *s);
+
+void print_error(const char *_message, int _line);
+void monty_error(const MontyError *error);
 
 #endif /* _MONTY_H_ */
