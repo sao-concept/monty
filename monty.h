@@ -93,6 +93,10 @@ void _pop_operation(stack_t **_stack, unsigned int _line_number);
 void _swap_operation(stack_t **_stack, unsigned int _line_number);
 void _add_operation(stack_t **_stack, unsigned int _line_number);
 void _nop_operation(stack_t **_stack, unsigned int _line_number);
+void _sub_operation(stack_t **_stack, unsigned int _line_number);
+void _div_operation(stack_t **_stack, unsigned int _line_number);
+void _mul_operation(stack_t **_stack, unsigned int _line_number);
+void _mod_operation(stack_t **_stack, unsigned int _line_number);
 
 void _free_used_stack(stack_t *head);
 void _free_used_lines(line_t *_lines);

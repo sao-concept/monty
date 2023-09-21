@@ -8,17 +8,20 @@
  */
 void (*_fetch_operator_func(char *_s))(stack_t **, unsigned int)
 {
-	instruction_t ops[] = {
-
-		{"push", _push_operation},
-		{"pall", _pall_operation},
-		{"pint", _pint_operation},
-        {"pop", _pop_operation},
-        {"swap", _swap_operation},
-        {"add", _add_operation},
-        {"nop", _nop_operation}, /* Add new functions here */
-		{NULL, NULL}
-    };
+instruction_t ops[] = {
+{"push", _push_operation},
+{"pall", _pall_operation},
+{"pint", _pint_operation},
+{"pop", _pop_operation},
+{"swap", _swap_operation},
+{"add", _add_operation},
+{"nop", _nop_operation},
+{"sub", _sub_operation},
+{"sub", _div_operation},
+{"sub", _mul_operation},
+{"sub", _mod_operation},/* Add new functions here */
+{NULL, NULL}
+};
 	int i = 0;
 
 	while (ops[i].opcode != NULL)
