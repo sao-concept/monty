@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 {
 	if (argc != 2)
 	{
-		fprintf(stderr, "Usage: monty FILE\n");
+		fprintf(stderr, "Usage: monty file\n");
 		return (EXIT_FAILURE);
 	}
 

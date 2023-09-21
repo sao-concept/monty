@@ -16,7 +16,7 @@ int _execute_monty(const char *_filename)
 	_lines = _text_file_reader(_filename);
 	if (!_lines)
 	{
-		fprintf(stderr, "Error: Cannot open this file %s\n", _filename);
+		fprintf(stderr, "Error: Can't open file  %s\n", _filename);
 		return (EXIT_FAILURE);
 	}
 	while (_lines[_line_number - 1]._content)
@@ -26,7 +26,7 @@ int _execute_monty(const char *_filename)
 
 		if (!_line || !_line[0])
 		{
-			fprintf(stderr, "Error: memory allocation failed\n");
+			fprintf(stderr, "Error: malloc failed \n");
 			_free_used_stack(_stack);
 			_free_used_lines(_lines);
 			return (EXIT_FAILURE);
@@ -36,7 +36,7 @@ int _execute_monty(const char *_filename)
 
 		if (!_func)
 		{
-			fprintf(stderr, "L%d: instruction not known %s\n", _line_number, _line[0]);
+			fprintf(stderr, "L%d: unknown instruction %s\n", _line_number, _line[0]);
 			free(_line);
 			_free_used_stack(_stack);
 			_free_used_lines(_lines);
