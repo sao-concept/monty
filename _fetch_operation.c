@@ -30,7 +30,7 @@ instruction_t ops[] = {
 
 	while (ops[i].opcode != NULL)
 	{
-		if (strcmp(ops[i].opcode, _s) == 0)
+		if (_strcmp(ops[i].opcode, _s) == 0)
 			return (ops[i].f);
 		i++;
 	}

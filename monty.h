@@ -82,5 +82,5 @@ int _atoi(char *s, int *n);
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 char *strdup(const char *s);
-
+int _strcmp(char *s1, char *s2);
 #endif /* _MONTY_H_ */
